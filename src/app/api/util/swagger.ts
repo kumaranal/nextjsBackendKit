@@ -13,7 +13,8 @@ const swaggerOptions = {
       },
     ],
   },
-  apis: ["./src/app/api/**/*.ts"], // Path to your API route files
+  // apis: ["./src/app/api/**/*.ts"], // Path to your API route files
+  apis: ["./.next/server/**/*.js"],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
