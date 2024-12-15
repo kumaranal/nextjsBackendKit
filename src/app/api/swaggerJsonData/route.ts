@@ -1,4 +1,4 @@
-import swaggerDocs from "../helperFunction/swagger";
+import swaggerDocs from "../util/swagger";
 
 export async function GET(request: Request) {
   return new Response(JSON.stringify(swaggerDocs), {

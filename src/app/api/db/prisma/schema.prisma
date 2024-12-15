@@ -14,6 +14,7 @@ datasource db {
   directUrl = env("DIRECT_URL")
 
 }
+//1:n relation
 model Post {
   id        Int     @id @default(autoincrement())
   title     String
@@ -38,7 +39,7 @@ model Group {
   users    UserGroup[]
 }
 
-// Custom join table
+// n:n relation Custom join table :junction table
 model UserGroup {
   id        Int       @id @default(autoincrement())
   user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
