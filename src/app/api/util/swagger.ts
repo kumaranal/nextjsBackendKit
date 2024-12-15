@@ -1,4 +1,6 @@
 import swaggerJsDoc from "swagger-jsdoc";
+import path from "path";
+
 const swaggerOptions = {
   definition: {
     openapi: "3.0.0",
@@ -13,8 +15,7 @@ const swaggerOptions = {
       },
     ],
   },
-  // apis: ["./src/app/api/**/*.ts"], // Path to your API route files
-  apis: ["./.next/server/**/*.js"],
+  apis: ["./src/app/api/**/*.ts"], // Path to your API route files
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
