@@ -7,7 +7,7 @@ export const processInParallel = async (operation: any, array: {}[] | []) => {
       } catch (error) {
         return { success: false, error, index };
       }
-    }),
+    })
   );
 
   // Separate successes and errors for easier usage
